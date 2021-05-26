@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.ifrs</groupId>
   <artifactId>demo-service-b</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.openliberty.features</groupId>
+        <artifactId>features-bom</artifactId>
+        <version>21.0.0.5</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <properties>
     <openliberty.maven.version>3.3.4</openliberty.maven.version>
     <maven.compiler.target>11</maven.compiler.target>
@@ -19,6 +33,12 @@
       <artifactId>microprofile</artifactId>
       <version>4.0.1</version>
       <type>pom</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.openliberty.features</groupId>
+      <artifactId>ejb-3.2</artifactId>
+      <type>esa</type>
       <scope>provided</scope>
     </dependency>
   </dependencies>
