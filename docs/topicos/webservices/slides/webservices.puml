@@ -1,0 +1,10 @@
+@startuml
+rectangle Browser 
+
+node "Server" {
+  Op1 <-right- [WSDL] : exposes
+  Op2 <-- [WSDL] : exposes
+}
+Op1 <-left-> Browser : soap/http
+Op2 <-left-> Browser : soap/http
+@enduml
