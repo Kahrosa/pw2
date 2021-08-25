@@ -15,13 +15,13 @@ public class NumberCheckerTest {
     @Test
     public void checkCounter() {
         get("/31");
-        assertMetricValue("ifrs.metrics.service.PrimeNumberChecker.performedChecks", 1);
+        assertMetricValue("ifrs.metrics.service.NumberChecker.performedChecks", 1);
         get("/33");
-        assertMetricValue("ifrs.metrics.service.PrimeNumberChecker.performedChecks", 2);
+        assertMetricValue("ifrs.metrics.service.NumberChecker.performedChecks", 2);
         get("/887");
-        assertMetricValue("ifrs.metrics.service.PrimeNumberChecker.highestPrimeNumberSoFar", 887);
-        get("/900");
-        assertMetricValue("ifrs.metrics.service.PrimeNumberChecker.highestPrimeNumberSoFar", 887);
+        assertMetricValue("ifrs.metrics.service.NumberChecker.highestPar", 1);
+        get("/2");
+        assertMetricValue("ifrs.metrics.service.NumberChecker.highestPar", 2);
     }
 
     private void assertMetricValue(String metric, Object value) {
