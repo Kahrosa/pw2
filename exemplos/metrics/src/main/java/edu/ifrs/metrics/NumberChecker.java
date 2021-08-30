@@ -1,4 +1,4 @@
-package ifrs.metrics.service;
+package edu.ifrs.metrics;
 
 import org.eclipse.microprofile.metrics.MetricUnits;
 import org.eclipse.microprofile.metrics.annotation.Counted;

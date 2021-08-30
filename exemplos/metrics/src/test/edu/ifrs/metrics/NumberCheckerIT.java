@@ -1,4 +1,4 @@
-package ifrs.metrics.service;
+package edu.ifrs.metrics;
 
 import io.quarkus.test.junit.NativeImageTest;
 
